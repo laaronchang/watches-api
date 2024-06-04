@@ -17,4 +17,12 @@ class WatchesControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "show" do
+    get "/watches/#{Watch.first.id}.json"
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal ["id", "brand", "model", "color", "price", "image_url", "created_at", "updated_at"], data.keys
+  end
+
 end

@@ -16,4 +16,9 @@ class WatchesController < ApplicationController
     render :index
   end
 
+  def show
+    @watch = Watch.find_by(id: params[:id])
+    render :show
+  end
+
 end
