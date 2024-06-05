@@ -25,4 +25,13 @@ class WatchesControllerTest < ActionDispatch::IntegrationTest
     assert_equal ["id", "brand", "model", "color", "price", "image_url", "created_at", "updated_at"], data.keys
   end
 
+  # test "update" do
+  #   watch = Watch.first
+  #   patch "watches/#{Watch.id}.json", params: { brand: "Updated name" }
+  #   assert_response 200
+
+  #   data = JSON.parse(response.body)
+  #   assert_equal "Updated name", data["brand"]
+  # end
+
 end
